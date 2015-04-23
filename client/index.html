@@ -46,13 +46,14 @@
           <a href="/" class="navbar-brand">MyBlog</a>
         </div>
         <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav ">
+            <li ng-show="isLoggedIn()"><a href="/article">Article</a></li>
+            
+            <li ng-show="isLoggedIn()"><a href="/ablum">Ablum</a></li>
             <!-- <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
                 <a ng-href="{{item.link}}">{{item.title}}</a>
             </li> -->
-            <li ng-class="{active: isActive('/wallpapers/new')}">
-              <a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cloud-upload"></span> Upload <span class="sr-only">(current)</span></a>
-            </li>
+
             <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
           </ul>
 
